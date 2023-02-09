@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="43.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <HBox layoutX="129.0" layoutY="14.0" prefHeight="35.0" prefWidth="343.0" spacing="15.0" AnchorPane.leftAnchor="129.0">
+         <children>
+            <Button fx:id="btnClientes" mnemonicParsing="false" text="Clientes" />
+            <Button fx:id="btnVeiculos" mnemonicParsing="false" text="Veículos" />
+            <Button fx:id="btnServicos" mnemonicParsing="false" text="Serviços" />
+            <Button fx:id="btnOrdemDeServicos" mnemonicParsing="false" text="Ordens De Serviços" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <ImageView fitHeight="320.0" fitWidth="319.0" layoutX="141.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
