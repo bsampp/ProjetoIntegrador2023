@@ -16,9 +16,10 @@
       <TableView layoutY="93.0" prefHeight="307.0" prefWidth="600.0">
         <columns>
           <TableColumn fx:id="tcCodCliente" prefWidth="51.0" text="Código" />
-          <TableColumn fx:id="tcNomeCliente" prefWidth="213.0" text="Nome" />
-            <TableColumn fx:id="tcTelefoneCliente" prefWidth="131.0" text="Telefone" />
-            <TableColumn prefWidth="204.0" text="E-mail" />
+          <TableColumn fx:id="tcNomeCliente" prefWidth="189.0" text="Nome" />
+            <TableColumn fx:id="tcTelefoneCliente" prefWidth="155.0" text="Telefone" />
+            <TableColumn prefWidth="99.0" text="E-mail" />
+            <TableColumn fx:id="tcNomeCliente1" prefWidth="105.0" text="CPF/CNPJ" />
         </columns>
       </TableView>
       <TextField layoutX="10.0" layoutY="57.0" prefHeight="25.0" prefWidth="320.0">
@@ -27,11 +28,11 @@
          </opaqueInsets>
       </TextField>
       <Label layoutX="22.0" layoutY="61.0" opacity="0.32" text="Nome do cliente" />
-      <HBox layoutX="17.0" layoutY="7.0" prefHeight="32.0" prefWidth="525.0" spacing="50.0">
+      <HBox layoutX="170.0" layoutY="6.0" prefHeight="32.0" prefWidth="525.0" spacing="50.0">
          <children>
-            <Button mnemonicParsing="false" text="Atualizar Cliente" />
-            <Button mnemonicParsing="false" style="-fx-background-color: #ff0000;" text="Deletar Registro de Cliente" textFill="WHITE" />
-            <Button mnemonicParsing="false" style="-fx-background-color: #008000;" text="Registrar Cliente" textFill="#ebebeb" />
+            <Button mnemonicParsing="false" text="Atualizar" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #ff0000;" text="Deletar " textFill="WHITE" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #008000;" text="Registrar" textFill="#ebebeb" />
          </children>
          <opaqueInsets>
             <Insets right="20.0" />

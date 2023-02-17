@@ -65,11 +65,11 @@
       </HBox>
       <VBox layoutX="51.0" layoutY="65.0" prefHeight="305.0" prefWidth="32.0" spacing="45.0">
          <children>
-            <Circle fill="DODGERBLUE" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="DODGERBLUE" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="DODGERBLUE" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="DODGERBLUE" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="DODGERBLUE" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#69b1f0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#69b1f0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#69b1f0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#69b1f0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#69b1f0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
          </children>
       </VBox>
    </children>
