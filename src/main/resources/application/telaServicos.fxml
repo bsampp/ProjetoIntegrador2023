@@ -13,15 +13,13 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="43.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <TableView layoutY="93.0" prefHeight="307.0" prefWidth="600.0">
-        <columns>
-          <TableColumn fx:id="tcCodCliente" prefWidth="51.0" text="Código" />
-          <TableColumn fx:id="tcNomeCliente" prefWidth="189.0" text="Nome" />
-            <TableColumn fx:id="tcTelefoneCliente" prefWidth="155.0" text="Telefone" />
-            <TableColumn prefWidth="99.0" text="E-mail" />
-            <TableColumn fx:id="tcNomeCliente1" prefWidth="105.0" text="CPF/CNPJ" />
-        </columns>
+         <columns>
+            <TableColumn fx:id="tcCodCliente" prefWidth="89.0" text="Código" />
+            <TableColumn fx:id="tcNomeCliente" prefWidth="446.0" text="Descrição" />
+            <TableColumn fx:id="tcTelefoneCliente" prefWidth="64.0" text="Valor" />
+         </columns>
       </TableView>
-      <TextField layoutX="10.0" layoutY="57.0" prefHeight="25.0" prefWidth="320.0" promptText="Nome do cliente">
+      <TextField layoutX="10.0" layoutY="57.0" prefHeight="25.0" prefWidth="320.0" promptText="Descrição do serviço">
          <opaqueInsets>
             <Insets bottom="50.0" />
          </opaqueInsets>
