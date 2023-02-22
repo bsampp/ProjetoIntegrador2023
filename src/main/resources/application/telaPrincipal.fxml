@@ -2,30 +2,90 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="43.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-      <HBox layoutX="129.0" layoutY="14.0" prefHeight="35.0" prefWidth="343.0" spacing="15.0" AnchorPane.leftAnchor="129.0">
-         <children>
-            <Button fx:id="btnClientes" mnemonicParsing="false" text="Clientes" />
-            <Button fx:id="btnVeiculos" mnemonicParsing="false" text="Veículos" />
-            <Button fx:id="btnServicos" mnemonicParsing="false" text="Serviços" />
-            <Button fx:id="btnOrdemDeServicos" mnemonicParsing="false" text="Ordens De Serviços" />
-         </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </HBox>
-      <ImageView fitHeight="320.0" fitWidth="319.0" layoutX="141.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@logo.png" />
-         </image>
-      </ImageView>
-   </children>
-</AnchorPane>
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="700.0" style="-fx-background-color: #69b1f0;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="99.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
+        <HBox layoutX="154.0" prefHeight="99.0" prefWidth="398.0" spacing="15.0">
+            <children>
+                <Button fx:id="btnClientes" contentDisplay="TOP" mnemonicParsing="false" prefHeight="83.0" prefWidth="85.0" style="-fx-background-color: #69b1f0;" text="Clientes">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logoCliente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+                <Button fx:id="btnVeiculos" contentDisplay="TOP" mnemonicParsing="false" prefHeight="83.0" prefWidth="79.0" style="-fx-background-color: #69b1f0;" text="Veículos">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="62.0">
+                     <image>
+                        <Image url="@carro-compacto.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                <Button fx:id="btnServicos" contentDisplay="TOP" mnemonicParsing="false" prefHeight="82.0" prefWidth="89.0" style="-fx-background-color: #69b1f0;" text="Serviços">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ferramentas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+                <Button fx:id="btnOrdemDeServicos" contentDisplay="TOP" mnemonicParsing="false" prefHeight="77.0" prefWidth="128.0" style="-fx-background-color: #69b1f0;" text="Ordens De Serviços">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ordemServico.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </HBox>
+        <ImageView fitHeight="320.0" fitWidth="319.0" layoutX="184.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@logo.png" />
+            </image>
+        </ImageView>
+    </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</fx:root>
