@@ -4,16 +4,19 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <VBox layoutX="97.0" layoutY="78.0" prefHeight="296.0" prefWidth="79.0" spacing="40.0">
          <children>
             <Label text="Nome">
@@ -68,17 +71,20 @@
       </HBox>
       <VBox layoutX="51.0" layoutY="82.0" prefHeight="293.0" prefWidth="32.0" spacing="40.0">
          <children>
-            <Circle fill="#69b1f0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#69b1f0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#69b1f0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#69b1f0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#69b1f0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
          </children>
       </VBox>
-      <Button layoutX="506.0" layoutY="358.0" mnemonicParsing="false" text="Confirmar">
+      <Button layoutX="506.0" layoutY="358.0" mnemonicParsing="false" style="-fx-background-color: #33658a;" text="Confirmar" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Button>
       <Button layoutX="19.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0">
          <graphic>
@@ -89,5 +95,10 @@
             </ImageView>
          </graphic>
       </Button>
+      <Label layoutX="206.0" layoutY="-3.0" prefHeight="35.0" prefWidth="196.0" text="Cadastro Cliente">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

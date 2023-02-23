@@ -3,19 +3,17 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="329.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="242.0" layoutY="253.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="117.0" text="Confirmar">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="400.0" layoutX="-15.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="630.0" />
       <VBox layoutX="69.0" layoutY="64.0" prefHeight="137.0" prefWidth="462.0" spacing="10.0">
          <children>
             <Label text="Escreva o nome do Serviço:">
@@ -32,7 +30,7 @@
          </children>
       </VBox>
       <TextField layoutX="69.0" layoutY="201.0" prefHeight="25.0" prefWidth="96.0" />
-      <Label layoutX="202.0" layoutY="9.0" prefHeight="35.0" prefWidth="196.0" text="Cadastro Serviço" textFill="#69b1f0">
+      <Label layoutX="202.0" layoutY="9.0" prefHeight="35.0" prefWidth="196.0" text="Cadastro Serviço">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
@@ -45,6 +43,14 @@
                </image>
             </ImageView>
          </graphic>
+      </Button>
+      <Button layoutX="243.0" layoutY="277.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="114.0" style="-fx-background-color: #33658a;" text="Confirmar" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Button>
    </children>
 </AnchorPane>

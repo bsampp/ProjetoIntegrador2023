@@ -9,6 +9,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -17,11 +18,11 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CadastroOS">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="419.0" layoutX="-15.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="336.0" layoutX="29.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="424.0" />
-      <Label layoutX="185.0" layoutY="7.0" text="Cadastro Ordem de Serviço" textFill="#69b1f0">
+      <Label layoutX="185.0" layoutY="7.0" text="Cadastro Ordem de Serviço" textFill="#000000e3">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -119,10 +120,13 @@
                   <Insets bottom="65.0" />
                </VBox.margin>
             </TextArea>
-            <Button mnemonicParsing="false" text="Confirmar">
+            <Button mnemonicParsing="false" style="-fx-background-color: #33658a;" text="Confirmar" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
          </children>
       </VBox>

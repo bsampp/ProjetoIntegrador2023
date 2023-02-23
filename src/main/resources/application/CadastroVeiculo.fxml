@@ -3,16 +3,18 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <VBox layoutX="108.0" layoutY="84.0" prefHeight="280.0" prefWidth="72.0" spacing="45.0">
          <children>
             <Label prefHeight="23.0" prefWidth="100.0" text="Modelo">
@@ -39,22 +41,22 @@
       </VBox>
       <VBox layoutX="70.0" layoutY="83.0" prefHeight="287.0" prefWidth="14.0" spacing="45.0">
          <children>
-            <Circle fill="#69b1f0" radius="15.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#69b1f0" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#69b1f0" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#69b1f0" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="15.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
          </children>
       </VBox>
       <VBox layoutX="190.0" layoutY="28.0" prefHeight="44.0" prefWidth="278.0">
          <children>
-            <Label prefHeight="42.0" prefWidth="237.0" text="Cadastro de Veículo" textAlignment="CENTER" textFill="#69b1f0">
+            <Label prefHeight="42.0" prefWidth="237.0" text="Cadastro de Veículo" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
          </children>
       </VBox>
-      <VBox layoutX="180.0" layoutY="90.0" prefHeight="271.0" prefWidth="267.0" spacing="50.0">
+      <VBox layoutX="180.0" layoutY="90.0" prefHeight="271.0" prefWidth="237.0" spacing="50.0">
          <children>
             <TextField />
             <TextField />
@@ -62,15 +64,22 @@
             <TextField />
          </children>
       </VBox>
-      <Button layoutX="33.0" layoutY="28.0" mnemonicParsing="false">
+      <Button layoutX="29.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0">
          <graphic>
-            <ImageView fitHeight="26.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="16.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@botao.jpg" />
+                  <Image url="@img.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="487.0" layoutY="330.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="67.0" text="confirmar" />
+      <Button layoutX="468.0" layoutY="331.0" mnemonicParsing="false" style="-fx-background-color: #33658a;" text="Confirmar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
    </children>
 </AnchorPane>
