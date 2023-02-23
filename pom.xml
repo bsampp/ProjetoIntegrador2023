@@ -60,8 +60,8 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass></mainClass>
-                            <launcher>app</launcher>
+                            <mainClass>App.app</mainClass>
+                            <launcher>application/App.App</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
                             <noManPages>true</noManPages>
