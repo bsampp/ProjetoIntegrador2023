@@ -41,7 +41,7 @@
          <graphic>
             <ImageView fitHeight="18.0" fitWidth="17.0">
                <image>
-                  <Image url="@de-volta.png" />
+                  <Image url="@img.png" />
                </image>
             </ImageView>
          </graphic>
