@@ -4,5 +4,6 @@ module com.example.motormanager {
 
 
     opens com.example.motormanager to javafx.fxml;
-    exports com.example.motormanager;
+    exports application;
+
 }
