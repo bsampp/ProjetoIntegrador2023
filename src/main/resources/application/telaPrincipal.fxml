@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="700.0" style="-fx-background-color: #69b1f0;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="700.0" style="-fx-background-color: #69b1f0;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaPrincipalController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="99.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
         <HBox layoutX="154.0" prefHeight="99.0" prefWidth="398.0" spacing="15.0">

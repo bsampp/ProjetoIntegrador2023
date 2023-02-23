@@ -1,9 +1,13 @@
-module com.example.motormanager {
+module ProjetoIntegrador2023 {
     requires javafx.controls;
     requires javafx.fxml;
+    requires transitive java.sql;
+    requires javafx.base;
 
+    opens App to javafx.fxml;
+    opens Controller to javafx.fxml;
 
-    opens com.example.motormanager to javafx.fxml;
-    exports application;
+    exports App;
+    exports Controller;
 
 }
