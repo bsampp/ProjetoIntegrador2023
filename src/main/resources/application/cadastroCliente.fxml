@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <VBox layoutX="97.0" layoutY="78.0" prefHeight="296.0" prefWidth="79.0" spacing="40.0">
@@ -69,13 +69,13 @@
             </RadioButton>
          </children>
       </HBox>
-      <VBox layoutX="51.0" layoutY="82.0" prefHeight="293.0" prefWidth="32.0" spacing="40.0">
+      <VBox layoutX="74.0" layoutY="84.0" prefHeight="293.0" prefWidth="13.0" spacing="58.0">
          <children>
-            <Circle fill="#33658a" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#33658a" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#33658a" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#33658a" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <Circle fill="#33658a" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#33658a" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
          </children>
       </VBox>
       <Button layoutX="506.0" layoutY="358.0" mnemonicParsing="false" style="-fx-background-color: #33658a;" text="Confirmar" textFill="WHITE">
