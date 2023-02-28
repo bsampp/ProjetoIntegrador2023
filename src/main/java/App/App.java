@@ -14,21 +14,9 @@ import java.security.Principal;
 import static javafx.fxml.FXMLLoader.load;
 
 public class App extends Application {
-    private static Stage stage;
-    private static Scene principal;
 
 
 
-
-    /* @Override
-    public void start(Stage stage) throws Exception {
-        Scene scene = new Scene(root, 1920, 1080);
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/resources/application/telaPrincipal"));
-        stage.setTitle("Tela Principal");
-        stage.setScene(scene);
-        stage.show();
-    }
-    */
     @Override
     public void start(Stage stage) throws Exception {
 

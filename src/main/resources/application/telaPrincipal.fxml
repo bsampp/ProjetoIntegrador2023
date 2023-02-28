@@ -15,7 +15,7 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="99.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
         <HBox layoutX="154.0" prefHeight="99.0" prefWidth="398.0" spacing="15.0">
             <children>
-                <Button fx:id="btnClientes" contentDisplay="TOP" mnemonicParsing="false" prefHeight="83.0" prefWidth="85.0" style="-fx-background-color: #69b1f0;" text="Clientes">
+                <Button fx:id="btnClientes" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnClientesAction" prefHeight="83.0" prefWidth="85.0" style="-fx-background-color: #69b1f0;" text="Clientes">
                <graphic>
                   <ImageView fitHeight="48.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -32,7 +32,7 @@
                <effect>
                   <DropShadow />
                </effect></Button>
-                <Button fx:id="btnVeiculos" contentDisplay="TOP" mnemonicParsing="false" prefHeight="83.0" prefWidth="79.0" style="-fx-background-color: #69b1f0;" text="Veículos">
+                <Button fx:id="btnVeiculos" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnVeiculosAction" prefHeight="83.0" prefWidth="79.0" style="-fx-background-color: #69b1f0;" text="Veículos">
                <HBox.margin>
                   <Insets top="10.0" />
                </HBox.margin>
@@ -46,7 +46,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-                <Button fx:id="btnServicos" contentDisplay="TOP" mnemonicParsing="false" prefHeight="82.0" prefWidth="89.0" style="-fx-background-color: #69b1f0;" text="Serviços">
+                <Button fx:id="btnServicos" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnServicosAction" prefHeight="82.0" prefWidth="89.0" style="-fx-background-color: #69b1f0;" text="Serviços">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -60,7 +60,7 @@
                <effect>
                   <DropShadow />
                </effect></Button>
-                <Button fx:id="btnOrdemDeServicos" contentDisplay="TOP" mnemonicParsing="false" prefHeight="77.0" prefWidth="128.0" style="-fx-background-color: #69b1f0;" text="Ordens De Serviços">
+                <Button fx:id="btnOrdemDeServicos" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnOSAction" prefHeight="77.0" prefWidth="128.0" style="-fx-background-color: #69b1f0;" text="Ordens De Serviços">
                <HBox.margin>
                   <Insets top="10.0" />
                </HBox.margin>
