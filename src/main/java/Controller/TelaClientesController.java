@@ -1,5 +1,6 @@
 package Controller;
 
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,9 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class TelaClientesController {
 
@@ -38,6 +38,7 @@ public class TelaClientesController {
     @FXML
     private TableColumn<?, ?> tcTelefoneCliente;
 
+
     @FXML
     void btnAtualizarAction(ActionEvent event) {
 
@@ -60,11 +61,12 @@ public class TelaClientesController {
 
     @FXML
     void btnVoltarAction(ActionEvent event) throws IOException {
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/application/telaPrincipal.fxml"));
-        Parent Root = Loader.load();
-        Scene Scene = new Scene(Root);
+        FXMLLoader principal = new FXMLLoader(getClass().getResource("/application/telaPrincipal.fxml"));
+        principal.setRoot(new AnchorPane());
+        Parent root = principal.load();
+        Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(Scene);
+        stage.setScene(scene);
     }
 
 }

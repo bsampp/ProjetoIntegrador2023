@@ -25,12 +25,13 @@ public class TelaPrincipalController {
 
     @FXML
     private Button btnVeiculos;
-
+    @FXML
     private Stage stage;
-
+    @FXML
     private Scene scene;
+    @FXML
     private Parent root;
-
+    @FXML
     public void btnClientesAction (ActionEvent event) throws IOException {
         FXMLLoader Loader = new FXMLLoader(getClass().getResource("/application/telaClientes.fxml"));
         Parent Root = Loader.load();
