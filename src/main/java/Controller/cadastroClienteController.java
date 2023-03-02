@@ -15,6 +15,9 @@ public class cadastroClienteController {
 
     @FXML
     private Button btnVoltar;
+    @FXML
+    private Button btnConfirma;
+
 
     @FXML
     private RadioButton rdbClienteFisico;

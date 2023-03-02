@@ -82,7 +82,7 @@
             <Circle fill="#33658a" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
          </children>
       </VBox>
-      <Button layoutX="506.0" layoutY="358.0" mnemonicParsing="false" style="-fx-background-color: #33658a;" text="Confirmar" textFill="WHITE">
+      <Button fx:id="btnConfirma" layoutX="506.0" layoutY="358.0" mnemonicParsing="false" onAction="#btnConfirmaAction" style="-fx-background-color: #33658a;" text="Confirmar" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>

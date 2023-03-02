@@ -7,7 +7,7 @@ import Model.Cliente;
 public interface ICliente {
 
     // CREATE
-    void adicionarCliente(Cliente cliente) throws SQLException;
+    void cadastrarCliente(Cliente cliente) throws SQLException;
 
     // READ
     Cliente buscarCliente(int codCliente) throws SQLException;
