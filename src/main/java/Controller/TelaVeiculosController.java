@@ -21,14 +21,18 @@ public class TelaVeiculosController {
     @FXML
     private Button btnVoltar;
 
-    @FXML
-    private TableColumn<?, ?> tcCodCliente;
 
     @FXML
-    private TableColumn<?, ?> tcNomeCliente;
+    private TableColumn<?, ?> tcAno;
 
     @FXML
-    private TableColumn<?, ?> tcTelefoneCliente;
+    private TableColumn<?, ?> tcCor;
+
+    @FXML
+    private TableColumn<?, ?> tcModelo;
+
+    @FXML
+    private TableColumn<?, ?> tcPlaca;
 
     @FXML
     void btnRegistrarAction(ActionEvent event) throws IOException {

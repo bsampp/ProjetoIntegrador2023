@@ -16,10 +16,10 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="43.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <TableView layoutY="93.0" prefHeight="307.0" prefWidth="600.0">
          <columns>
-            <TableColumn fx:id="tcCodCliente" prefWidth="136.0" text="Placa" />
-            <TableColumn fx:id="tcNomeCliente" prefWidth="300.0" text="Modelo" />
-            <TableColumn fx:id="tcTelefoneCliente" prefWidth="53.0" text="Ano" />
-            <TableColumn prefWidth="110.0" text="Cor" />
+            <TableColumn fx:id="tcPlaca" prefWidth="136.0" text="Placa" />
+            <TableColumn fx:id="tcModelo" prefWidth="300.0" text="Modelo" />
+            <TableColumn fx:id="tcAno" prefWidth="53.0" text="Ano" />
+            <TableColumn fx:id="tcCor" prefWidth="110.0" text="Cor" />
          </columns>
       </TableView>
       <TextField layoutX="10.0" layoutY="57.0" prefHeight="25.0" prefWidth="320.0" promptText="Placa do veículo">
