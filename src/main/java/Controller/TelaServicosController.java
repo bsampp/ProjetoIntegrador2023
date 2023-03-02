@@ -33,7 +33,7 @@ public class TelaServicosController {
     @FXML
     void btnRegistrarAction(ActionEvent event) {
         try {
-            FXMLLoader Loader = new FXMLLoader(getClass().getResource("/application/cadastroServicos.fxml"));
+            FXMLLoader Loader = new FXMLLoader(getClass().getResource("/View/cadastroServicos.fxml"));
             Parent Root = Loader.load();
             Scene Scene = new Scene(Root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -46,7 +46,7 @@ public class TelaServicosController {
 
     @FXML
     void btnVoltarAction(ActionEvent event) throws IOException {
-        FXMLLoader principal = new FXMLLoader(getClass().getResource("/application/telaPrincipal.fxml"));
+        FXMLLoader principal = new FXMLLoader(getClass().getResource("/View/telaPrincipal.fxml"));
         principal.setRoot(new AnchorPane());
         Parent root = principal.load();
         Scene scene = new Scene(root);

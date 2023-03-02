@@ -36,7 +36,7 @@ public class TelaVeiculosController {
 
     @FXML
     void btnRegistrarAction(ActionEvent event) throws IOException {
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/application/cadastroVeiculo.fxml"));
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/View/cadastroVeiculo.fxml"));
         Parent Root = Loader.load();
         Scene Scene = new Scene(Root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -45,7 +45,7 @@ public class TelaVeiculosController {
 
     @FXML
     void btnVoltarAction(ActionEvent event) throws IOException {
-        FXMLLoader principal = new FXMLLoader(getClass().getResource("/application/telaPrincipal.fxml"));
+        FXMLLoader principal = new FXMLLoader(getClass().getResource("/View/telaPrincipal.fxml"));
         principal.setRoot(new AnchorPane());
         Parent root = principal.load();
         Scene scene = new Scene(root);

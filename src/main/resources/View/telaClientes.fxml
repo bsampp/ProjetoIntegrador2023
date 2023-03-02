@@ -11,16 +11,17 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaClientesController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaClientesController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="43.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <TableView layoutY="93.0" prefHeight="307.0" prefWidth="600.0">
         <columns>
           <TableColumn fx:id="tcCodCliente" prefWidth="51.0" text="Código" />
-          <TableColumn fx:id="tcNomeCliente" prefWidth="189.0" text="Nome" />
-            <TableColumn fx:id="tcTelefoneCliente" prefWidth="155.0" text="Telefone" />
-            <TableColumn prefWidth="99.0" text="E-mail" />
-            <TableColumn fx:id="tcNomeCliente1" prefWidth="105.0" text="CPF/CNPJ" />
+          <TableColumn fx:id="tcNomeCliente" prefWidth="143.0" text="Nome" />
+            <TableColumn fx:id="tcTelefoneCliente" prefWidth="153.0" text="Telefone" />
+            <TableColumn fx:id="tcEmail" prefWidth="110.0" text="E-mail" />
+            <TableColumn fx:id="tcTipoCliente" prefWidth="32.0" text="Tipo" />
+            <TableColumn fx:id="tcCPFCNPJ" prefWidth="110.0" text="CPF/CNPJ" />
         </columns>
       </TableView>
       <TextField layoutX="10.0" layoutY="57.0" prefHeight="25.0" prefWidth="320.0" promptText="Nome do cliente">

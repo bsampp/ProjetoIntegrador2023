@@ -7,7 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -33,7 +32,7 @@ public class TelaPrincipalController {
     private Parent root;
     @FXML
     public void btnClientesAction (ActionEvent event) throws IOException {
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/application/telaClientes.fxml"));
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/View/telaClientes.fxml"));
         Parent Root = Loader.load();
         Scene Scene = new Scene(Root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -43,7 +42,7 @@ public class TelaPrincipalController {
 
     @FXML
     void btnOSAction(ActionEvent event) throws IOException {
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/application/telaOS.fxml"));
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/View/telaOS.fxml"));
         Parent Root = Loader.load();
         Scene Scene = new Scene(Root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -52,7 +51,7 @@ public class TelaPrincipalController {
 
     @FXML
     void btnServicosAction(ActionEvent event) throws IOException {
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/application/telaServicos.fxml"));
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/View/telaServicos.fxml"));
         Parent Root = Loader.load();
         Scene Scene = new Scene(Root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -61,7 +60,7 @@ public class TelaPrincipalController {
 
     @FXML
     void btnVeiculosAction(ActionEvent event) throws IOException {
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/application/telaVeiculos.fxml"));
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/View/telaVeiculos.fxml"));
         Parent Root = Loader.load();
         Scene Scene = new Scene(Root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

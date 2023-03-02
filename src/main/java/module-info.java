@@ -6,8 +6,10 @@ module ProjetoIntegrador2023 {
 
     opens App to javafx.fxml;
     opens Controller to javafx.fxml;
+    opens DAO to javafx.fxml;
 
     exports App;
     exports Controller;
+    exports DAO;
 
 }

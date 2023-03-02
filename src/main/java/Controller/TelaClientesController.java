@@ -27,17 +27,22 @@ public class TelaClientesController {
     private Button btnVoltar;
 
     @FXML
+    private TableColumn<?, ?> tcCPFCNPJ;
+
+    @FXML
     private TableColumn<?, ?> tcCodCliente;
+
+    @FXML
+    private TableColumn<?, ?> tcEmail;
 
     @FXML
     private TableColumn<?, ?> tcNomeCliente;
 
     @FXML
-    private TableColumn<?, ?> tcNomeCliente1;
-
-    @FXML
     private TableColumn<?, ?> tcTelefoneCliente;
 
+    @FXML
+    private TableColumn<?, ?> tcTipoCliente;
 
     @FXML
     void btnAtualizarAction(ActionEvent event) {
@@ -51,7 +56,7 @@ public class TelaClientesController {
 
     @FXML
     void btnRegistrarAction(ActionEvent event) throws IOException {
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/application/cadastroCliente.fxml"));
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/View/cadastroCliente.fxml"));
         Parent Root = Loader.load();
         Scene Scene = new Scene(Root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -61,7 +66,7 @@ public class TelaClientesController {
 
     @FXML
     void btnVoltarAction(ActionEvent event) throws IOException {
-        FXMLLoader principal = new FXMLLoader(getClass().getResource("/application/telaPrincipal.fxml"));
+        FXMLLoader principal = new FXMLLoader(getClass().getResource("/View/telaPrincipal.fxml"));
         principal.setRoot(new AnchorPane());
         Parent root = principal.load();
         Scene scene = new Scene(root);

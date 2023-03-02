@@ -70,7 +70,7 @@ public class cadastroClienteController {
     @FXML
     void btnVoltarAction(ActionEvent event) throws IOException {
 
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/application/telaClientes.fxml"));
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/View/telaClientes.fxml"));
         Parent Root = Loader.load();
         Scene Scene = new Scene(Root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
