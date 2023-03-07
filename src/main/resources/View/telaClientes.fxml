@@ -14,7 +14,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaClientesController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="43.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-      <TableView layoutY="93.0" prefHeight="307.0" prefWidth="600.0">
+      <TableView fx:id="tabelaClientes" layoutY="93.0" prefHeight="307.0" prefWidth="600.0">
         <columns>
           <TableColumn fx:id="tcCodCliente" prefWidth="51.0" text="Código" />
           <TableColumn fx:id="tcNomeCliente" prefWidth="143.0" text="Nome" />

@@ -17,7 +17,7 @@
       <TableView layoutY="93.0" prefHeight="307.0" prefWidth="600.0">
          <columns>
             <TableColumn fx:id="tcCod" prefWidth="89.0" text="Código" />
-            <TableColumn fx:id="tcDescricao" prefWidth="446.0" text="Descrição" />
+            <TableColumn fx:id="tcNome" prefWidth="446.0" text="Nome" />
             <TableColumn fx:id="tcValor" prefWidth="64.0" text="Valor" />
          </columns>
       </TableView>

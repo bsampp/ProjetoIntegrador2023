@@ -1,8 +1,8 @@
 package Model;
 
 public enum TipoCliente {
-    FISICO("F"),
-    JURIDICO("J");
+    F("F"),
+    J("J");
 
     private String tipo;
 
@@ -13,5 +13,9 @@ public enum TipoCliente {
     public String getTipo() {
         return tipo;
     }
+
+
+
+
 }
 

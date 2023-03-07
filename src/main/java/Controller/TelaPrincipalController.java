@@ -31,14 +31,20 @@ public class TelaPrincipalController {
     @FXML
     private Parent root;
     @FXML
-    public void btnClientesAction (ActionEvent event) throws IOException {
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/View/telaClientes.fxml"));
-        Parent Root = Loader.load();
-        Scene Scene = new Scene(Root);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(Scene);
-
+    public void btnClientesAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/telaClientes.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+        } catch (IOException e) {
+            // Tratamento de exceção
+            System.err.println("Erro ao carregar a tela de clientes: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
+
 
     @FXML
     void btnOSAction(ActionEvent event) throws IOException {

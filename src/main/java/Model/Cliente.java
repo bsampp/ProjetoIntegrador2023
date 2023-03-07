@@ -1,6 +1,4 @@
 package Model;
-import Model.TipoCliente;
-
 
 
 public class Cliente {
@@ -8,15 +6,15 @@ public class Cliente {
     private String telefone;
     private String nome;
     private String email;
-    private String cpf;
+    private String cadastro;
     private TipoCliente tipoCliente;
 
-    public Cliente(int codCliente, String telefone, String nome, String email, String cpf, TipoCliente tipoCliente) {
+    public Cliente(int codCliente, String telefone, String nome, String email, String cadastro, TipoCliente tipoCliente) {
         this.codCliente = codCliente;
         this.telefone = telefone;
         this.nome = nome;
         this.email = email;
-        this.cpf = cpf;
+        this.cadastro = cadastro;
         this.tipoCliente = tipoCliente;
     }
 
@@ -53,17 +51,18 @@ public class Cliente {
         this.email = email;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCadastro() {
+        return cadastro;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCadastro(String cadastro) {
+        this.cadastro = cadastro;
     }
 
     public TipoCliente getTipoCliente() {
         return tipoCliente;
     }
+
 
     public void setTipoCliente(TipoCliente tipoCliente) {
         this.tipoCliente = tipoCliente;

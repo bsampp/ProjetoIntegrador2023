@@ -2,14 +2,11 @@ package DAO;
 
 import Model.Cliente;
 import Model.TipoCliente;
-import DAO.Conexao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class ClienteDAO implements ICliente {
 
@@ -21,27 +18,33 @@ public class ClienteDAO implements ICliente {
 
     @Override
     public void cadastrarCliente(Cliente cliente) throws SQLException {
-        String sql = "INSERT INTO cliente (codCliente, telefone, nome, email, cpf, tipocliente) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO cliente (telefone, nome, email, cadastro, tipoCliente) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement pstmt = conexao.prepareStatement(sql);
-        pstmt.setInt(1, cliente.getCodCliente());
-        pstmt.setString(2, cliente.getTelefone());
-        pstmt.setString(3, cliente.getNome());
-        pstmt.setString(4, cliente.getEmail());
-        pstmt.setString(5, cliente.getCpf());
-        pstmt.setString(6, cliente.getTipoCliente().toString());
-        pstmt.execute();
+        pstmt.setString(1, cliente.getTelefone());
+        pstmt.setString(2, cliente.getNome());
+        pstmt.setString(3, cliente.getEmail());
+        pstmt.setString(4, cliente.getCadastro());
+        pstmt.setObject(5, cliente.getTipoCliente(), Types.OTHER);
+        int rowsAffected = pstmt.executeUpdate();
+        if (rowsAffected > 0) {
+            ResultSet rs = pstmt.getGeneratedKeys();
+            if (rs.next()) {
+                int codCliente = rs.getInt(1);
+                cliente.setCodCliente(codCliente);
+            }
+        }
         pstmt.close();
     }
 
     @Override
     public void atualizarCliente(Cliente cliente) throws SQLException {
-        String sql = "UPDATE cliente SET telefone=?, nome=?, email=?, cpf=?, tipocliente=? WHERE codCliente=?";
+        String sql = "UPDATE cliente SET telefone=?, nome=?, email=?, cadastro=?, tipocliente=? WHERE codCliente=?";
         PreparedStatement pstmt = conexao.prepareStatement(sql);
         pstmt.setString(1, cliente.getTelefone());
         pstmt.setString(2, cliente.getNome());
         pstmt.setString(3, cliente.getEmail());
-        pstmt.setString(4, cliente.getCpf());
-        pstmt.setString(5, cliente.getTipoCliente().toString());
+        pstmt.setString(4, cliente.getCadastro());
+        pstmt.setObject(5, cliente.getTipoCliente(), Types.OTHER);
         pstmt.setInt(6, cliente.getCodCliente());
         pstmt.execute();
         pstmt.close();
@@ -67,9 +70,14 @@ public class ClienteDAO implements ICliente {
             String telefone = rs.getString("telefone");
             String nome = rs.getString("nome");
             String email = rs.getString("email");
-            String cpf = rs.getString("cpf");
-            TipoCliente tipoCliente = TipoCliente.valueOf(rs.getString("tipocliente"));
-            cliente = new Cliente(codCliente, telefone, nome, email, cpf, tipoCliente);
+            String cadastro = rs.getString("cadastro");
+            TipoCliente tipoCliente;
+            if (rs.getString("tipocliente").equals("F")) {
+                tipoCliente = TipoCliente.F;
+            } else {
+                tipoCliente = TipoCliente.J;
+            }
+            cliente = new Cliente(codCliente, telefone, nome, email, cadastro, tipoCliente);
         }
         rs.close();
         pstmt.close();
@@ -87,9 +95,14 @@ public class ClienteDAO implements ICliente {
             String telefone = rs.getString("telefone");
             String nome = rs.getString("nome");
             String email = rs.getString("email");
-            String cpf = rs.getString("cpf");
-            TipoCliente tipoCliente = TipoCliente.valueOf(rs.getString("tipocliente"));
-            Cliente cliente = new Cliente(codCliente, telefone, nome, email, cpf, tipoCliente);
+            String cadastro = rs.getString("cadastro");
+            TipoCliente tipoCliente;
+            if (rs.getString("tipocliente").equals("F")) {
+                tipoCliente = TipoCliente.F;
+            } else {
+                tipoCliente = TipoCliente.J;
+            }
+            Cliente cliente = new Cliente(codCliente, telefone, nome, email, cadastro, tipoCliente);
             lista.add(cliente);
         }
         rs.close();
