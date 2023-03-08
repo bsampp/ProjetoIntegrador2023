@@ -98,7 +98,7 @@ public class TelaClientesController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/cadastroCliente.fxml"));
             Parent root = loader.load();
 
-            cadastroClienteController controller = loader.getController();
+            CadastroClienteController controller = loader.getController();
             controller.setCliente(clienteSelecionado);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
