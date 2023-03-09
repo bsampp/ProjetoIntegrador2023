@@ -67,5 +67,11 @@ public class Cliente {
     public void setTipoCliente(TipoCliente tipoCliente) {
         this.tipoCliente = tipoCliente;
     }
+
+    public String toString(){
+        return codCliente + "-" + nome;
+    }
+
+
 }
 

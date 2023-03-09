@@ -3,6 +3,7 @@ package Controller;
 import DAO.ClienteDAO;
 import DAO.Conexao;
 import DAO.VeiculoDAO;
+import Model.Cliente;
 import Model.Veiculo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -26,6 +27,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TelaVeiculosController {
+
+    @FXML
+    private Button btnAtualizar;
+
+    @FXML
+    private Button btnDeletar;
 
     @FXML
     private Button btnRegistrar;
@@ -71,7 +78,47 @@ public class TelaVeiculosController {
         tabelaVeiculos.setItems(observableList);
     }
 
+    @FXML
+    void btnAtualizarAction(ActionEvent event) {
+        // Obtém o cliente selecionado na tabela TableView
+        Veiculo veiculoSelecionado = tabelaVeiculos.getSelectionModel().getSelectedItem();
+        if (veiculoSelecionado == null) {
+            return;
+        }
 
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/cadastroVeiculo.fxml"));
+            Parent root = loader.load();
+
+            CadastroVeiculoController controller = loader.getController();
+            controller.setVeiculo(veiculoSelecionado);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void btnDeletarAction(ActionEvent event) throws SQLException {
+        // Obtém o cliente selecionado na tabela TableView
+        Veiculo veiculoSelecionado = tabelaVeiculos.getSelectionModel().getSelectedItem();
+
+        if (veiculoSelecionado != null) {
+            // Se o cliente selecionado não for nulo, chama o método deletarCliente do ClienteDAO
+            Connection conexao = Conexao.getConnection();
+            ClienteDAO clienteDAO = new ClienteDAO(conexao);
+
+            try {
+                clienteDAO.removerCliente(veiculoSelecionado.getCodCliente());
+                tabelaVeiculos.getItems().remove(veiculoSelecionado); // Remove o cliente da tabela TableView
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 
     @FXML

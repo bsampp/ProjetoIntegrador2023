@@ -11,31 +11,31 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="329.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="329.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastroServicosController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="400.0" layoutX="-15.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="630.0" />
       <VBox layoutX="69.0" layoutY="64.0" prefHeight="137.0" prefWidth="462.0" spacing="10.0">
          <children>
-            <Label text="Escreva o nome do Serviço:">
+            <Label text="Serviço:">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField prefHeight="55.0" prefWidth="231.0" />
-            <Label text="Defina o preço do serviço:">
+            <TextField fx:id="tfdNome" prefHeight="55.0" prefWidth="231.0" />
+            <Label text="Defina o valor do serviço:">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
          </children>
       </VBox>
-      <TextField layoutX="69.0" layoutY="201.0" prefHeight="25.0" prefWidth="96.0" />
+      <TextField fx:id="tfdValor" layoutX="69.0" layoutY="201.0" prefHeight="25.0" prefWidth="96.0" />
       <Label layoutX="202.0" layoutY="9.0" prefHeight="35.0" prefWidth="196.0" text="Cadastro Serviço">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="21.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="20.0">
+      <Button fx:id="btnVoltar" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnVoltarAction" prefHeight="25.0" prefWidth="20.0">
          <graphic>
             <ImageView fitHeight="18.0" fitWidth="17.0">
                <image>
@@ -44,7 +44,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="243.0" layoutY="277.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="114.0" style="-fx-background-color: #33658a;" text="Confirmar" textFill="WHITE">
+      <Button fx:id="btnConfirma" layoutX="243.0" layoutY="277.0" mnemonicParsing="false" onAction="#btnConfirmaAction" prefHeight="43.0" prefWidth="114.0" style="-fx-background-color: #33658a;" text="Confirmar" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>

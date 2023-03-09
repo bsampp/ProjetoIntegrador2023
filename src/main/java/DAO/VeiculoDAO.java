@@ -1,5 +1,7 @@
 package DAO;
 
+import Model.Cliente;
+import Model.TipoCliente;
 import Model.Veiculo;
 
 import java.sql.Connection;
@@ -21,7 +23,7 @@ public class VeiculoDAO implements IVeiculo {
     public void cadastrarVeiculo(Veiculo veiculo) throws SQLException {
         String sql = "INSERT INTO veiculo (placa, modelo, cor, anoFabricacao, codCliente) VALUES (?, ?, ?, ?, ?)";
 
-        try (PreparedStatement pstmt = conexao.prepareStatement(sql)) {
+            PreparedStatement pstmt = conexao.prepareStatement(sql);
             pstmt.setString(1, veiculo.getPlaca());
             pstmt.setString(2, veiculo.getModelo());
             pstmt.setString(3, veiculo.getCor());
@@ -29,12 +31,26 @@ public class VeiculoDAO implements IVeiculo {
             pstmt.setInt(5, veiculo.getCodCliente());
 
             pstmt.executeUpdate();
-        }
+
     }
 
     @Override
     public Veiculo buscarVeiculo(String placa) throws SQLException {
-        return null;
+        String sql = "SELECT * FROM veiculo WHERE placa=?";
+        PreparedStatement pstmt = conexao.prepareStatement(sql);
+        pstmt.setString(1, placa);
+        ResultSet rs = pstmt.executeQuery();
+        Veiculo veiculo = null;
+        if (rs.next()) {
+            String modelo = rs.getString("modelo");
+            String cor = rs.getString("cor");
+            int anoFabricacao = rs.getInt("anoFabricacao");
+            int codCliente = rs.getInt("codCliente");
+            veiculo = new Veiculo(placa, modelo, cor, anoFabricacao, codCliente);
+        }
+        rs.close();
+        pstmt.close();
+        return veiculo;
     }
 
     @Override
@@ -59,11 +75,26 @@ public class VeiculoDAO implements IVeiculo {
 
     @Override
     public void atualizarVeiculo(Veiculo veiculo) throws SQLException {
+        String sql = "UPDATE veiculo SET modelo=?, cor=?, anoFabricacao=?, codCliente=? WHERE placa=?";
 
+        PreparedStatement pstmt = conexao.prepareStatement(sql);
+        pstmt.setString(1, veiculo.getModelo());
+        pstmt.setString(2, veiculo.getCor());
+        pstmt.setInt(3, veiculo.getAnoFabricacao());
+        pstmt.setInt(4, veiculo.getCodCliente());
+        pstmt.setString(5, veiculo.getPlaca());
+        pstmt.execute();
+        pstmt.close();;
     }
+
 
     @Override
     public void removerVeiculo(String placa) throws SQLException {
-
+        String sql = "DELETE FROM veiculo WHERE placa = ?";
+        PreparedStatement pstmt = conexao.prepareStatement(sql);
+        pstmt.setString(1, placa);
+        pstmt.execute();
+        pstmt.close();
     }
+
 }

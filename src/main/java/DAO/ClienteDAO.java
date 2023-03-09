@@ -16,11 +16,10 @@ public class ClienteDAO implements ICliente {
 
         this.conexao = conexao;
     }
-
     @Override
     public void cadastrarCliente(Cliente cliente) throws SQLException {
         String sql = "INSERT INTO cliente (telefone, nome, email, cadastro, tipoCliente) VALUES (?, ?, ?, ?, ?)";
-        PreparedStatement pstmt = conexao.prepareStatement(sql);
+        PreparedStatement pstmt = conexao.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         pstmt.setString(1, cliente.getTelefone());
         pstmt.setString(2, cliente.getNome());
         pstmt.setString(3, cliente.getEmail());
@@ -36,6 +35,7 @@ public class ClienteDAO implements ICliente {
         }
         pstmt.close();
     }
+
 
     @Override
     public void atualizarCliente(Cliente cliente) throws SQLException {
@@ -108,6 +108,7 @@ public class ClienteDAO implements ICliente {
         }
         rs.close();
         pstmt.close();
+
         return lista;
     }
 

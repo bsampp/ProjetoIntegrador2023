@@ -87,6 +87,8 @@ public class CadastroClienteController {
         // Define o mesmo ToggleGroup para os dois RadioButtons
         rdbClienteFisico.setToggleGroup(tipoCliente);
         rdbClienteJuridico.setToggleGroup(tipoCliente);
+        tfdCPF.setDisable(true);
+        tfdCNPJ.setDisable(true);
         tfdCPF.setTextFormatter(new TextFormatter<>(c -> {
             if (c.getControlNewText().matches("\\d{0,11}")) {
                 return c;
@@ -111,35 +113,36 @@ public class CadastroClienteController {
     @FXML
     void btnConfirmaAction(ActionEvent event) throws SQLException {
         Connection conexao = Conexao.getConnection();
-        // Obter valores dos campos de entrada do usuário
         String nome = tfdNome.getText();
         String telefone = tfdTelefone.getText();
         String email = tfdEmail.getText();
         String cadastro = rdbClienteFisico.isSelected() ? tfdCPF.getText() : tfdCNPJ.getText();
         TipoCliente tipoCliente = rdbClienteFisico.isSelected() ? TipoCliente.F : TipoCliente.J;
 
-        // Verificar se o cliente já existe no banco de dados
         ClienteDAO clienteDAO = new ClienteDAO(conexao);
 
-        // Criar objeto Cliente com os valores obtidos
         if (clienteEditando == null) {
             Cliente novoCliente = new Cliente(0, telefone, nome, email, cadastro, tipoCliente);
-            // Chamar o método cadastrarCliente() da classe ClienteDAO
             try {
                 clienteDAO.cadastrarCliente(novoCliente);
-                // Mostra mensagem de sucesso
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Cadastro de Cliente");
                 alert.setHeaderText(null);
                 alert.setContentText("Cliente cadastrado com sucesso!");
                 alert.showAndWait();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/telaClientes.fxml"));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
             } catch (SQLException e) {
-                // Mostra mensagem de erro
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Erro ao cadastrar cliente");
                 alert.setHeaderText(null);
                 alert.setContentText("Não foi possível cadastrar o cliente. Erro: " + e.getMessage());
                 alert.showAndWait();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
 
         }else{
@@ -150,19 +153,24 @@ public class CadastroClienteController {
             clienteEditando.setTipoCliente(tipoCliente);
             try{
                 clienteDAO.atualizarCliente(clienteEditando);
-                // Mostra mensagem de sucesso
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Edição de Cliente");
                 alert.setHeaderText(null);
                 alert.setContentText("Cliente editado com sucesso!");
                 alert.showAndWait();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/telaClientes.fxml"));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
             }catch (SQLException e) {
-                // Mostra mensagem de erro
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Erro ao editar cliente");
                 alert.setHeaderText(null);
                 alert.setContentText("Não foi possível editar o cliente. Erro: " + e.getMessage());
                 alert.showAndWait();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
         }
     }

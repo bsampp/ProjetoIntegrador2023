@@ -14,7 +14,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaServicosController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69b1f0" height="43.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-      <TableView layoutY="93.0" prefHeight="307.0" prefWidth="600.0">
+      <TableView fx:id="tabelaServicos" layoutY="93.0" prefHeight="307.0" prefWidth="600.0">
          <columns>
             <TableColumn fx:id="tcCod" prefWidth="89.0" text="Código" />
             <TableColumn fx:id="tcNome" prefWidth="446.0" text="Nome" />
@@ -28,8 +28,8 @@
       </TextField>
       <HBox layoutX="170.0" layoutY="6.0" prefHeight="32.0" prefWidth="525.0" spacing="50.0">
          <children>
-            <Button mnemonicParsing="false" text="Atualizar" />
-            <Button mnemonicParsing="false" style="-fx-background-color: #ff0000;" text="Deletar " textFill="WHITE" />
+            <Button fx:id="btnAtualizar" mnemonicParsing="false" onAction="#btnAtualizarAction" text="Atualizar" />
+            <Button fx:id="btnDeletar" mnemonicParsing="false" onAction="#btnDeletarActin" style="-fx-background-color: #ff0000;" text="Deletar " textFill="WHITE" />
             <Button fx:id="btnRegistrar" mnemonicParsing="false" onAction="#btnRegistrarAction" style="-fx-background-color: #008000;" text="Registrar" textFill="#ebebeb" />
          </children>
          <opaqueInsets>
