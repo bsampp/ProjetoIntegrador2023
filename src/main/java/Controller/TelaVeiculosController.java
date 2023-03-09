@@ -109,10 +109,10 @@ public class TelaVeiculosController {
         if (veiculoSelecionado != null) {
             // Se o cliente selecionado não for nulo, chama o método deletarCliente do ClienteDAO
             Connection conexao = Conexao.getConnection();
-            ClienteDAO clienteDAO = new ClienteDAO(conexao);
+            VeiculoDAO veiculoDAO = new VeiculoDAO(conexao);
 
             try {
-                clienteDAO.removerCliente(veiculoSelecionado.getCodCliente());
+                veiculoDAO.removerVeiculo(veiculoSelecionado.getPlaca());
                 tabelaVeiculos.getItems().remove(veiculoSelecionado); // Remove o cliente da tabela TableView
             } catch (SQLException e) {
                 e.printStackTrace();

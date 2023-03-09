@@ -75,6 +75,24 @@ public class TelaServicosController {
 
     @FXML
     void btnAtualizarAction(ActionEvent event) {
+        Servico servicoSelecionado = tabelaServicos.getSelectionModel().getSelectedItem();
+        if (servicoSelecionado == null) {
+            return;
+        }
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/cadastroServicos.fxml"));
+            Parent root = loader.load();
+
+            CadastroServicosController controller = loader.getController();
+            controller.setServico(servicoSelecionado);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 

@@ -2,6 +2,7 @@ package DAO;
 
 import Model.Cliente;
 import Model.Servico;
+import Model.TipoCliente;
 import Model.Veiculo;
 
 import java.sql.*;
@@ -36,7 +37,19 @@ public class ServicoDAO implements IServico {
 
     @Override
     public Servico buscarServico(int codServico) throws SQLException {
-        return null;
+        String sql = "SELECT * FROM servico WHERE codServico=?";
+        PreparedStatement pstmt = conexao.prepareStatement(sql);
+        pstmt.setInt(1, codServico);
+        ResultSet rs = pstmt.executeQuery();
+        Servico servico = null;
+        if (rs.next()) {
+            String nome = rs.getString("nome");
+            float valor = rs.getFloat("valor");
+            servico = new Servico(codServico, nome, valor);
+        }
+        rs.close();
+        pstmt.close();
+        return servico;
     }
 
     @Override
@@ -59,7 +72,13 @@ public class ServicoDAO implements IServico {
 
     @Override
     public void atualizarServico(Servico servico) throws SQLException {
-
+        String sql = "UPDATE servico SET nome=?, valor=? WHERE codServico=?";
+        PreparedStatement pstmt = conexao.prepareStatement(sql);
+        pstmt.setString(1, servico.getNome());
+        pstmt.setFloat(2, servico.getValor());
+        pstmt.setInt(3, servico.getCodServico());
+        pstmt.execute();
+        pstmt.close();
     }
 
     @Override
