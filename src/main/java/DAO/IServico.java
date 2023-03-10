@@ -2,7 +2,6 @@ package DAO;
 
 import java.sql.SQLException;
 import java.util.List;
-import Model.Cliente;
 import Model.Servico;
 
 public interface IServico {
